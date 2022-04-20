@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
       () => Navigator.pushReplacementNamed(
         context,
         //navigate to different page (login/home)
-        user != '' ? homeScreen : homeScreen,
+        user != '' ? Variables.homeScreen : Variables.homeScreen,
         arguments: "page_under_construction",
       ),
     );
@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   getUser() async {
     SharedPreferences sharedPref = await SharedPreferences.getInstance();
-    user = sharedPref.getString(userId) ?? '';
+    user = sharedPref.getString(Variables.userId) ?? '';
   }
 
   @override

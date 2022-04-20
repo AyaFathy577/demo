@@ -5,24 +5,28 @@ import 'package:flutter/material.dart';
 
 Future<Locale> setLocale(String languageCode) async {
   SharedPreferences _prefs = await SharedPreferences.getInstance();
-  await _prefs.setString(langCode, languageCode);
+  await _prefs.setString(Variables.langCode, languageCode);
   return _locale(languageCode);
 }
 
 Future<Locale> getLocale() async {
   SharedPreferences _prefs = await SharedPreferences.getInstance();
-  String _languageCode = _prefs.getString(langCode) ?? arabicLangCode;
+  String _languageCode =
+      _prefs.getString(Variables.langCode) ?? Variables.arabicLangCode;
   return _locale(_languageCode);
 }
 
 Locale _locale(String languageCode) {
   switch (languageCode) {
-    case englishLangCode:
-      return const Locale(englishLangCode, englishCountryCode);
-    case arabicLangCode:
-      return const Locale(arabicLangCode, arabicCountryCode);
+    case Variables.englishLangCode:
+      return const Locale(
+          Variables.englishLangCode, Variables.englishCountryCode);
+    case Variables.arabicLangCode:
+      return const Locale(
+          Variables.arabicLangCode, Variables.arabicCountryCode);
     default:
-      return const Locale(arabicLangCode, arabicCountryCode);
+      return const Locale(
+          Variables.arabicLangCode, Variables.arabicCountryCode);
   }
 }
 

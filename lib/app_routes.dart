@@ -6,7 +6,7 @@ class AppRoutes {
   Route? generateRoute(RouteSettings settings) {
     var args = settings.arguments;
     switch (settings.name) {
-      case homeScreen:
+      case Variables.homeScreen:
         return MaterialPageRoute(
           builder: (_) => HomeScreen(title: args as String),
         );

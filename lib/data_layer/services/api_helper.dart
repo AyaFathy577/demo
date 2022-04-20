@@ -16,7 +16,7 @@ class ApiHelper {
     };
     http.Response response;
     try {
-      response = await http.post(Uri.parse("$baseUrl$uri"),
+      response = await http.post(Uri.parse("${Variables.baseUrl}$uri"),
           headers: headers, body: body);
       debugPrint(
           "response.statusCode in post request : ${response.statusCode}");
@@ -38,7 +38,7 @@ class ApiHelper {
     };
     http.Response response;
     try {
-      response = await http.put(Uri.parse("$baseUrl$uri"),
+      response = await http.put(Uri.parse("${Variables.baseUrl}$uri"),
           headers: headers, body: body);
       debugPrint("response.statusCode in put request : ${response.statusCode}");
       return response;
@@ -58,7 +58,8 @@ class ApiHelper {
     };
     http.Response response;
     try {
-      response = await http.get(Uri.parse("$baseUrl$uri"), headers: headers);
+      response = await http.get(Uri.parse("${Variables.baseUrl}$uri"),
+          headers: headers);
       debugPrint("response.statusCode in get request : ${response.statusCode}");
       return response;
     } catch (err) {
@@ -77,7 +78,8 @@ class ApiHelper {
     };
     http.Response response;
     try {
-      response = await http.delete(Uri.parse("$baseUrl$uri"), headers: headers);
+      response = await http.delete(Uri.parse("${Variables.baseUrl}$uri"),
+          headers: headers);
       debugPrint(
           "response.statusCode in delete request : ${response.statusCode}");
       return response;
@@ -90,6 +92,6 @@ class ApiHelper {
 
   Future getToken() async {
     SharedPreferences sharedPref = await SharedPreferences.getInstance();
-    token = sharedPref.getString(accessToken) ?? '';
+    token = sharedPref.getString(Variables.accessToken) ?? '';
   }
 }

@@ -3,9 +3,12 @@ import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 import 'package:demo/data_layer/providers/language_provider.dart';
 
-List<SingleChildWidget> getProviders() {
-  return [
-    ChangeNotifierProvider.value(value: LanguageProvider()),
-    ChangeNotifierProvider.value(value: CounterProvider()),
-  ];
+class Functions {
+  Functions._();
+  static List<SingleChildWidget> getProviders() {
+    return [
+      ChangeNotifierProvider.value(value: LanguageProvider()),
+      ChangeNotifierProvider.value(value: CounterProvider()),
+    ];
+  }
 }

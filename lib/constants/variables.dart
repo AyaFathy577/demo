@@ -1,20 +1,21 @@
-///main uri
-const String baseUrl = "";
+class Variables {
+  ///main uri
+  static const String baseUrl = "";
 
-///languages code
-const String langCode = "languageCode";
-const String englishLangCode = "en";
-const String arabicLangCode = "ar";
-const String englishCountryCode = "US";
-const String arabicCountryCode = "SA";
+  ///languages code
+  static const String langCode = "languageCode";
+  static const String englishLangCode = "en";
+  static const String arabicLangCode = "ar";
+  static const String englishCountryCode = "US";
+  static const String arabicCountryCode = "SA";
 
-///database
-const String userId = "id";
-const String userName = "name";
-const String userPhone = "phone";
-const String accessToken = "token";
+  ///database
+  static const String userId = "id";
+  static const String userName = "name";
+  static const String userPhone = "phone";
+  static const String accessToken = "token";
 
-
-///routes
-const String splashScreen = "/splash_screen";
-const String homeScreen = "/home_screen";
+  ///routes
+  static const String splashScreen = "/splash_screen";
+  static const String homeScreen = "/home_screen";
+}

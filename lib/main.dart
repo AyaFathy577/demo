@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: getProviders(),
+      providers: Functions.getProviders(),
       child: Consumer<LanguageProvider>(builder: (context, provider, _) {
         return MaterialApp(
           title: 'Flutter Demo',
@@ -45,8 +45,8 @@ class _MyAppState extends State<MyApp> {
           debugShowCheckedModeBanner: false,
           locale: provider.locale,
           supportedLocales: const [
-            Locale(englishLangCode, englishCountryCode),
-            Locale(arabicLangCode, arabicCountryCode),
+            Locale(Variables.englishLangCode, Variables.englishCountryCode),
+            Locale(Variables.arabicLangCode, Variables.arabicCountryCode),
           ],
           localizationsDelegates: const [
             Localization.delegate,
