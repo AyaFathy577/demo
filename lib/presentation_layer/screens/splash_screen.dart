@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
       () => Navigator.pushReplacementNamed(
         context,
         //navigate to different page (login/home)
-        user != '' ? Variables.homeScreen : Variables.homeScreen,
+        user != '' ? Variables.tabsScreen : Variables.tabsScreen,
         arguments: "page_under_construction",
       ),
     );

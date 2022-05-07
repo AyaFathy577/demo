@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(getTranslated(context, widget.title)!),
+        title: Text(widget.title),
       ),
       body: Center(
         child: Column(
