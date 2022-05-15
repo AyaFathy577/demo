@@ -1,6 +1,7 @@
 import 'package:demo/data_layer/providers/tabs_provider.dart';
 import 'package:demo/localization/language_constants.dart';
 import 'package:demo/presentation_layer/screens/home_screen.dart';
+import 'package:demo/presentation_layer/screens/setting_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -19,7 +20,7 @@ class _TabsPageState extends State<TabsPage> {
       title: 'Home',
     ),
     const Scaffold(
-      body: Center(child: Text("Profile"),),
+      body: SettingScreen(),
     ),
     const Scaffold(
       body: Center(child: Text("Shop"),),

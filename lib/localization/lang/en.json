@@ -1,4 +1,7 @@
 {
     "page_under_construction": "Page under construction",
-    "num_of_push":"You have pushed the button this many times:"
+    "num_of_push":"You have pushed the button this many times:",
+    "data0":"Hello0",
+    "data1":"Hello1",
+    "data2":"Hello2"
 }
