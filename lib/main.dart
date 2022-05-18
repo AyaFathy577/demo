@@ -5,6 +5,7 @@ import 'package:demo/localization/localization.dart';
 import 'package:demo/app_routes.dart';
 import 'package:demo/presentation_layer/screens/home_screen.dart';
 import 'package:demo/presentation_layer/screens/splash_screen.dart';
+import 'package:demo/presentation_layer/screens/view_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -15,6 +16,7 @@ void main() {
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
+
   static void setLocale(BuildContext context, Locale newLocale) {
     _MyAppState state = context.findAncestorStateOfType<_MyAppState>()!;
     state.setLocale(context, newLocale);
@@ -64,7 +66,8 @@ class _MyAppState extends State<MyApp> {
             return supportedLocales.first;
           },
           onGenerateRoute: AppRoutes().generateRoute,
-          home: const SplashScreen(),
+          home: const ViewScreen(),
+          // home: const SplashScreen(),
         );
       }),
     );
