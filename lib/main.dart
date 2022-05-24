@@ -4,6 +4,7 @@ import 'package:demo/data_layer/providers/language_provider.dart';
 import 'package:demo/localization/localization.dart';
 import 'package:demo/app_routes.dart';
 import 'package:demo/presentation_layer/screens/home_screen.dart';
+import 'package:demo/presentation_layer/screens/pagination_screen.dart';
 import 'package:demo/presentation_layer/screens/splash_screen.dart';
 import 'package:demo/presentation_layer/screens/view_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -66,7 +67,7 @@ class _MyAppState extends State<MyApp> {
             return supportedLocales.first;
           },
           onGenerateRoute: AppRoutes().generateRoute,
-          home: const ViewScreen(),
+          home: const PaginationScreen(),
           // home: const SplashScreen(),
         );
       }),
